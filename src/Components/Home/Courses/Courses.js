@@ -11,7 +11,7 @@ const Courses = () => {
     setEnrollCourseInfo,
   ] = useContext(UserContext);
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);

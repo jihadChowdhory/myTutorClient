@@ -24,7 +24,7 @@ const Reviews = () => {
     formData.append("company", reviewInfo.company);
     formData.append("message", reviewInfo.message);
 
-    fetch("http://localhost:5000/addReview", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/addReview", {
       method: "POST",
       body: formData,
     })

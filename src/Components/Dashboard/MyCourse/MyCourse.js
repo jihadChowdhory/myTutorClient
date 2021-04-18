@@ -8,7 +8,7 @@ const MyCourse = () => {
   const [enrolledCourse, setEnrolledCourse] = useState([]);
   const email = loggedInUser.email;
   useEffect(() => {
-    fetch("http://localhost:5000/enrolledCourses", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/enrolledCourses", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: email }),

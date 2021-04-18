@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [admin, setAdmin] = useState([1, 2]);
   const email = loggedInUser.email;
   useEffect(() => {
-    fetch("http://localhost:5000/checkEmail", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/checkEmail", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),

@@ -3,7 +3,7 @@ import React from "react";
 const SingleCourse = ({ course, setIsDeleted }) => {
   const handleDelete = () => {
     const courseId = course._id;
-    fetch("http://localhost:5000/deleteCourse", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/deleteCourse", {
       method: "DELETE",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ courseId }),

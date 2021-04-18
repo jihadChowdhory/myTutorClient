@@ -9,7 +9,7 @@ const AddAdmin = () => {
     setAdminEmail(email);
   };
   const handleAddAdmin = () => {
-    fetch("http://localhost:5000/addAdmin", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email: adminEmail }),

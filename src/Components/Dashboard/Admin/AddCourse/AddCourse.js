@@ -21,7 +21,7 @@ const AddCourse = () => {
     formData.append("courseInstructor", courseInfo.courseInstructor);
     formData.append("coursePrice", courseInfo.coursePrice);
 
-    fetch("http://localhost:5000/addCourse", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/addCourse", {
       method: "POST",
       body: formData,
     })

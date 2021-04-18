@@ -4,7 +4,7 @@ const Order = ({ order, setIsStatusChanged }) => {
   const handleStatus = (e) => {
     const orderId = order._id;
     const orderStatus = e.target.innerText;
-    fetch("http://localhost:5000/updateStatus", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/updateStatus", {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ orderId, orderStatus }),

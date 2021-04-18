@@ -6,7 +6,7 @@ const AllCourse = () => {
   const [courses, setCourses] = useState([]);
   const [isDeleted, setIsDeleted] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/allCourses")
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/allCourses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);

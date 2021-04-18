@@ -6,7 +6,7 @@ const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [isStatusChanged, setIsStatusChanged] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);

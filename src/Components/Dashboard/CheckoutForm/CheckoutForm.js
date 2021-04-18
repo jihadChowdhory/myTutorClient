@@ -10,7 +10,7 @@ const CheckoutForm = ({ enrollCourseInfo }) => {
   const [isEnrolled, setIsEnrolled] = useState(false);
   // Handling order submit
   const handleOrderSubmit = () => {
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://enigmatic-badlands-92540.herokuapp.com/addOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(enrollCourseInfo),
