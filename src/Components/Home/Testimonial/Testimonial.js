@@ -1,5 +1,4 @@
 import React from "react";
-import jihad from "../../../images/jihad.jfif";
 
 const Testimonial = ({ testimonial }) => {
   return (

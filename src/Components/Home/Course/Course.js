@@ -1,7 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import courseImg from "../../../images/courseImg.jfif";
-import UserContext from "../../../App";
 
 const Course = ({ course, enrollCourseInfo, setEnrollCourseInfo }) => {
   const handleEnroll = () => {
