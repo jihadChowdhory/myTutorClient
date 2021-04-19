@@ -1,0 +1,6 @@
+.course-card:hover {
+  box-shadow: 5px 5px 8px lightgrey;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+  transition: 0.2s;
+}

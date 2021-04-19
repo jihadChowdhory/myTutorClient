@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Course.css";
 
 const Course = ({ course, enrollCourseInfo, setEnrollCourseInfo }) => {
   const handleEnroll = () => {
@@ -7,12 +8,12 @@ const Course = ({ course, enrollCourseInfo, setEnrollCourseInfo }) => {
   };
   return (
     <div
-      className="card col-md-4 text-center mb-5 shadow"
+      className="card col-md-4 text-center mb-5 course-card"
       style={{ width: "20rem" }}
     >
       <img
         src={`data:image/png;base64,${course.img.img}`}
-        className="card-img-top"
+        className="card-img-top border"
         alt="..."
         style={{ height: "250px", width: "100%" }}
       />
