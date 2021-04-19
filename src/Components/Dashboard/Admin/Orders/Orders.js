@@ -5,10 +5,14 @@ import Order from "../Order/Order";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [isStatusChanged, setIsStatusChanged] = useState(false);
+  const [spinner, setSpinner] = useState(true);
   useEffect(() => {
     fetch("https://enigmatic-badlands-92540.herokuapp.com/orders")
       .then((res) => res.json())
-      .then((data) => setOrders(data));
+      .then((data) => {
+        setOrders(data);
+        setSpinner(false);
+      });
   }, []);
   return (
     <div className="row">
@@ -48,6 +52,13 @@ const Orders = () => {
             ))}
           </tbody>
         </table>
+        {spinner && (
+          <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden"></span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SingleCourse = ({ course, setIsDeleted }) => {
   const handleDelete = () => {
@@ -9,7 +9,9 @@ const SingleCourse = ({ course, setIsDeleted }) => {
       body: JSON.stringify({ courseId }),
     })
       .then((res) => res.json())
-      .then((data) => setIsDeleted(data));
+      .then((data) => {
+        setIsDeleted(data);
+      });
   };
   return (
     <tr>

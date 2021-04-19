@@ -5,10 +5,14 @@ import SingleCourse from "../SingleCourse/SingleCourse";
 const AllCourse = () => {
   const [courses, setCourses] = useState([]);
   const [isDeleted, setIsDeleted] = useState(false);
+  const [spinner, setSpinner] = useState(true);
   useEffect(() => {
     fetch("https://enigmatic-badlands-92540.herokuapp.com/allCourses")
       .then((res) => res.json())
-      .then((data) => setCourses(data));
+      .then((data) => {
+        setCourses(data);
+        setSpinner(false);
+      });
   }, []);
   return (
     <div className="row">
@@ -46,6 +50,13 @@ const AllCourse = () => {
             ))}
           </tbody>
         </table>
+        {spinner && (
+          <div className="d-flex justify-content-center">
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden"></span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
